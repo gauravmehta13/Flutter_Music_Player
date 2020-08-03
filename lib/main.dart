@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:file_picker/file_picker.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 void main() {
   runApp(MyApp());
