@@ -127,9 +127,9 @@ class MyApp extends StatelessWidget {
           ),
           floatingActionButton: Container(
             width: double.infinity,
-            padding: EdgeInsets.only(bottom: 100.0),
+            // padding: EdgeInsets.only(bottom: 100.0),
             child: Align(
-              alignment: Alignment.bottomCenter,
+              alignment: Alignment(0.15, 0.5),
               child: FloatingActionButton.extended(
                 onPressed: () async {
                   String filepath = await FilePicker.getFilePath();
