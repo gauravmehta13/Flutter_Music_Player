@@ -7,8 +7,8 @@ This app will be a completely new Music Player which will have
 Emoticon Reactions, some new never seen before designs, and a quick reponsive enviroment.
 
 
-=========================================================================================================
+===================================================================
 # Disclaimer :
 I tried this Just for Educational Purposes, without the consent of these platforms.Use at your own Risk.
 Please take prior consent if you want to add anyone's website in your app's Webview.
-=========================================================================================================
+
