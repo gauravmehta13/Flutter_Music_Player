@@ -1,14 +1,14 @@
-# musicplayer
+# Musicplayer
+Blog Link : https://medium.com/@gauravmehta13/music-player-built-with-flutter-27310b54d02a?sk=d4d3446827bc94fc98dbeb55c7868fee
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point of my Flutter Journey.
+## Music Player Built With Flutter
 
 This app will be a completely new Music Player which will have 
 Emoticon Reactions, some new never seen before designs, and a quick reponsive enviroment.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+=========================================================================================================
+# Disclaimer :
+I tried this Just for Educational Purposes, without the consent of these platforms.Use at your own Risk.
+Please take prior consent if you want to add anyone's website in your app's Webview.
+=========================================================================================================
