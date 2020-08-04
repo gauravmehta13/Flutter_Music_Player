@@ -82,12 +82,6 @@ class HomePage extends State<MainPage> {
       ),
       body: Stack(
         children: <Widget>[
-          /* Container(
-              height: 50,
-              width: double.infinity,
-              color: Colors.blueGrey,
-              //icon: Icon(CustomIcons.heart)
-            ),*/
           //had to change loop count of gif from "https://ezgif.com/loop-count"
           Image.asset("assets/music.gif"),
           Center(
@@ -256,9 +250,12 @@ class Youtube extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      // appBar: new AppBar(
-      // title: new Text('Gaana Songs Downloader'),
-      //),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(0), // here the desired height
+        child: AppBar(
+          backgroundColor: Colors.black,
+        ),
+      ),
       body: const WebView(
         initialUrl: 'https://music.youtube.com/',
         javascriptMode: JavascriptMode.unrestricted,
@@ -271,9 +268,12 @@ class Wynk extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      // appBar: new AppBar(
-      // title: new Text('Gaana Songs Downloader'),
-      //),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(0), // here the desired height
+        child: AppBar(
+          backgroundColor: Colors.redAccent,
+        ),
+      ),
       body: const WebView(
         initialUrl: 'https://wynk.in/music',
         javascriptMode: JavascriptMode.unrestricted,
@@ -286,9 +286,12 @@ class JioSaavn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      // appBar: new AppBar(
-      // title: new Text('Gaana Songs Downloader'),
-      //),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(0), // here the desired height
+        child: AppBar(
+          backgroundColor: Colors.greenAccent,
+        ),
+      ),
       body: const WebView(
         initialUrl: 'https://www.jiosaavn.com/',
         javascriptMode: JavascriptMode.unrestricted,
@@ -301,9 +304,12 @@ class Gaana extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      // appBar: new AppBar(
-      // title: new Text('Gaana Songs Downloader'),
-      //),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(0), // here the desired height
+        child: AppBar(
+          backgroundColor: Colors.redAccent,
+        ),
+      ),
       body: const WebView(
         initialUrl: 'https://gaana.com/',
         javascriptMode: JavascriptMode.unrestricted,
