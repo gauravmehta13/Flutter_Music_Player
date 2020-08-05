@@ -1,7 +1,9 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:musicplayer/video.dart';
+import 'audio.dart';
 import 'home.dart';
+import 'video.dart';
 
 void main() {
   runApp(MyApp());
@@ -34,7 +36,7 @@ class MyBottomNavigationBar extends StatefulWidget {
 
 class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
   int _currentindex = 0;
-  final List<Widget> _children = [HomePage(), Video()];
+  final List<Widget> _children = [HomePage(), Audio(), Video()];
   void onTappedBar(int newindex) {
     setState(() {
       _currentindex = newindex;
@@ -51,10 +53,10 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
           height: 50,
           items: <Widget>[
             Icon(Icons.home, size: 20, color: Colors.white),
-            Icon(Icons.video_call, size: 20, color: Colors.white),
-            Icon(Icons.album, size: 20, color: Colors.white),
+            Icon(Icons.music_note, size: 20, color: Colors.white),
+            Icon(Icons.ondemand_video, size: 20, color: Colors.white),
           ],
-          animationDuration: Duration(milliseconds: 600),
+          animationDuration: Duration(milliseconds: 500),
           animationCurve: Curves.fastOutSlowIn,
           onTap: onTappedBar,
           index: _currentindex,

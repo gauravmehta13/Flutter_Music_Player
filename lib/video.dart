@@ -9,10 +9,12 @@ class _VideoState extends State<Video> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
-          title: Text("Video"),
+          backgroundColor: Colors.black,
+          title: Text("Video Player"),
         ),
       ),
     );
