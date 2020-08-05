@@ -12,6 +12,11 @@ class _VideoState extends State<Video> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar: AppBar(
+          title: Text("Stream Online "),
+          centerTitle: true,
+          backgroundColor: Colors.black,
+        ),
         backgroundColor: Colors.black,
         body: SafeArea(
             child: SingleChildScrollView(
@@ -56,6 +61,20 @@ class _VideoState extends State<Video> {
                         borderRadius: BorderRadius.circular(20),
                         image: DecorationImage(
                             image: AssetImage('assets/icons/jiocinema.png'),
+                            fit: BoxFit.cover)),
+                  )),
+              Container(
+                height: 10,
+              ),
+              new GestureDetector(
+                  onTap: () => Navigator.of(context).pushNamed('/Tubitv'),
+                  child: Container(
+                    height: 150,
+                    decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(20),
+                        image: DecorationImage(
+                            image: AssetImage('assets/icons/tubi.png'),
                             fit: BoxFit.cover)),
                   ))
             ],
@@ -114,6 +133,24 @@ class JioCinema extends StatelessWidget {
       ),
       body: WebView(
         initialUrl: 'https://www.jiocinema.com/',
+        javascriptMode: JavascriptMode.unrestricted,
+      ),
+    );
+  }
+}
+
+class Tubitv extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(0), // here the desired height
+        child: AppBar(
+          backgroundColor: Colors.black,
+        ),
+      ),
+      body: WebView(
+        initialUrl: 'https://tubitv.com/home',
         javascriptMode: JavascriptMode.unrestricted,
       ),
     );

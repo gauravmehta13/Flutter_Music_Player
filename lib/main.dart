@@ -4,6 +4,7 @@ import 'package:musicplayer/ui/video.dart';
 import 'ui/audio.dart';
 import 'ui/home.dart';
 import 'ui/video.dart';
+import 'ui/video.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       ),
       home: MyBottomNavigationBar(),
       routes: <String, WidgetBuilder>{
+        '/Tubitv': (BuildContext context) => new Tubitv(),
         '/JioCinema': (BuildContext context) => new JioCinema(),
         '/Youtube': (BuildContext context) => new YouTube(),
         '/MxPlayer': (BuildContext context) => new MxPlayer(),
@@ -40,7 +42,7 @@ class MyBottomNavigationBar extends StatefulWidget {
 class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
   int _currentindex = 0;
   final List<Widget> _children = [
-    HomePage(),
+    //HomePage(),
     Audio(),
     Video(),
   ];
@@ -59,7 +61,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
           backgroundColor: Colors.black,
           height: 50,
           items: <Widget>[
-            Icon(Icons.home, size: 20, color: Colors.white),
+            // Icon(Icons.home, size: 20, color: Colors.white),
             Icon(Icons.music_note, size: 20, color: Colors.white),
             Icon(Icons.ondemand_video, size: 20, color: Colors.white),
           ],
