@@ -53,6 +53,9 @@ flutter:
     - assets/icons/saavn1.png
     - assets/icons/wynk.png
     - assets/icons/gaana.png
+    - assets/icons/youtube-banner.png
+    - assets/icons/mx-player.jpg
+    - assets/icons/jiocinema.png
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

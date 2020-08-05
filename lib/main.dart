@@ -1,9 +1,9 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:musicplayer/video.dart';
-import 'audio.dart';
-import 'home.dart';
-import 'video.dart';
+import 'package:musicplayer/ui/video.dart';
+import 'ui/audio.dart';
+import 'ui/home.dart';
+import 'ui/video.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,7 +20,10 @@ class MyApp extends StatelessWidget {
       ),
       home: MyBottomNavigationBar(),
       routes: <String, WidgetBuilder>{
-        '/Youtube': (BuildContext context) => new Youtube(),
+        '/JioCinema': (BuildContext context) => new JioCinema(),
+        '/Youtube': (BuildContext context) => new YouTube(),
+        '/MxPlayer': (BuildContext context) => new MxPlayer(),
+        '/YtMusic': (BuildContext context) => new YtMusic(),
         '/JioSaavn': (BuildContext context) => new JioSaavn(),
         '/Wynk': (BuildContext context) => new Wynk(),
         '/Gaana': (BuildContext context) => new Gaana(),
@@ -36,7 +39,11 @@ class MyBottomNavigationBar extends StatefulWidget {
 
 class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
   int _currentindex = 0;
-  final List<Widget> _children = [HomePage(), Audio(), Video()];
+  final List<Widget> _children = [
+    HomePage(),
+    Audio(),
+    Video(),
+  ];
   void onTappedBar(int newindex) {
     setState(() {
       _currentindex = newindex;
@@ -48,7 +55,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
     return new Scaffold(
         body: _children[_currentindex],
         bottomNavigationBar: CurvedNavigationBar(
-          color: Colors.blue,
+          color: Colors.red,
           backgroundColor: Colors.black,
           height: 50,
           items: <Widget>[

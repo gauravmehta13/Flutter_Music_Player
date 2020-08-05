@@ -29,7 +29,7 @@ class _AudioState extends State<Audio> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        actions: <Widget>[
+        /*actions: <Widget>[
           Padding(
               padding: EdgeInsets.only(right: 20.0),
               child: GestureDetector(
@@ -57,9 +57,10 @@ class _AudioState extends State<Audio> {
                   size: 26.0,
                 ),
               )),
-        ],
+        ],*/
         backgroundColor: Colors.black,
         title: Text('Retro Music'),
+        centerTitle: true,
       ),
       body: Stack(
         children: <Widget>[
@@ -133,6 +134,7 @@ class _AudioState extends State<Audio> {
             Align(
               alignment: Alignment(0.15, 0.4),
               child: FloatingActionButton.extended(
+                backgroundColor: Colors.white,
                 onPressed: () async {
                   String filepath = await FilePicker.getFilePath();
                   int status = await _audioplayer.play(filepath, isLocal: true);
@@ -145,11 +147,13 @@ class _AudioState extends State<Audio> {
                 icon: Icon(Icons.music_note),
                 heroTag: "Local",
                 label: Text("Choose Song to Play"),
+                foregroundColor: Colors.red,
               ),
             ),
             Align(
               alignment: Alignment(1.1, 0.7),
               child: FloatingActionButton.extended(
+                backgroundColor: Colors.white,
                 onPressed: () => Navigator.of(context).pushNamed('/Gaana'),
                 icon: new Image.asset(
                   'assets/icons/gaana.png',
@@ -162,6 +166,7 @@ class _AudioState extends State<Audio> {
             Align(
               alignment: Alignment(0.478, 0.7),
               child: FloatingActionButton.extended(
+                backgroundColor: Colors.white,
                 onPressed: () => Navigator.of(context).pushNamed('/Wynk'),
                 icon: new Image.asset(
                   'assets/icons/wynk.png',
@@ -174,6 +179,7 @@ class _AudioState extends State<Audio> {
             Align(
               alignment: Alignment(-0.27, 0.7),
               child: FloatingActionButton.extended(
+                  backgroundColor: Colors.white,
                   onPressed: () => Navigator.of(context).pushNamed('/JioSaavn'),
                   icon: new Image.asset(
                     'assets/icons/saavn1.png',
@@ -185,7 +191,8 @@ class _AudioState extends State<Audio> {
             Align(
               alignment: Alignment(-0.9, 0.7),
               child: FloatingActionButton.extended(
-                onPressed: () => Navigator.of(context).pushNamed('/Youtube'),
+                backgroundColor: Colors.white,
+                onPressed: () => Navigator.of(context).pushNamed('/YtMusic'),
                 icon: new Image.asset(
                   'assets/icons/yt.png',
                   width: 60,
@@ -201,7 +208,7 @@ class _AudioState extends State<Audio> {
   }
 }
 
-class Youtube extends StatelessWidget {
+class YtMusic extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
