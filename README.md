@@ -9,6 +9,6 @@ Emoticon Reactions, some new never seen before designs, and a quick reponsive en
 
 ===================================================================
 # Disclaimer :
-I tried this Just for Educational Purpose, without the consent of these platforms.Use at your own Risk.
+I tried this Just for Educational Purposes, without the consent of these platforms.Use at your own Risk.
 Please take prior consent if you want to add anyone's website in your app's Webview.
 
